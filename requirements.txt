@@ -5,7 +5,6 @@ seaborn
 keras>=3.0
 keras_cv>=0.8
 tensorflow>=2.15
-tensorflow-metal
 scikit-learn
 Pillow
 fonttools
