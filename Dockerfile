@@ -2,6 +2,7 @@
 FROM tensorflow/tensorflow:latest
 
 # Устанавливаем дополнительные библиотеки, которые вам могут понадобиться
+RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install pandas numpy matplotlib seaborn
 RUN pip install --upgrade keras keras_cv tensorflow
 RUN pip install tensorflow-metal
