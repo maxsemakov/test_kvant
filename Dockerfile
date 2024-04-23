@@ -16,9 +16,7 @@ COPY texts  /app/texts
 COPY tmp  /app/tmp
 COPY train_1st  /app/train_1st
 COPY train_2nd  /app/train_2nd
-#COPY .gitattributes  /app
-#COPY .gitignore  /app
-COPY task.txt  /app
+
 
 
 CMD ["jupyter", "notebook", "--notebook-dir=/app/notebooks", "--ip=0.0.0.0", "--port=8888", "--allow-root"]
