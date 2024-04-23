@@ -18,3 +18,4 @@ COPY .gitignore  /app
 COPY main.py  /app
 COPY task.txt  /app
 
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]

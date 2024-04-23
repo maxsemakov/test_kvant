@@ -9,4 +9,5 @@ scikit-learn
 Pillow
 fonttools
 joblib
+jupyter
 tqdm
