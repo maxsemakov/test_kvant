@@ -1,9 +1,11 @@
-# Используем официальный образ tensoflow как базовый
-FROM tensorflow/tensorflow:latest
+# Используем официальный образ tensoflow как базовый для архитектуры x86_64
+#FROM tensorflow/tensorflow:latest
+# Используем  образ от bitnami как базовый для архитектуры ARM и x86_64
+FROM bitnami/tensorflow:latest
 
-COPY requirements.txt /
-# Устанавливаем дополнительные библиотеки, которые могут понадобиться
-RUN pip install --no-cache-dir --upgrade-strategy only-if-needed -r requirements.txt
+
+
+
 COPY notebooks  /app/notebooks
 COPY texts  /app/texts
 COPY tmp  /app/tmp
@@ -12,5 +14,11 @@ COPY train_2nd  /app/train_2nd
 COPY fonts  /app/fonts
 
 COPY main.py  /app
+COPY requirements.txt /app
+
+EXPOSE 8888
+
+
+
 
 
