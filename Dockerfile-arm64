@@ -1,7 +1,7 @@
 # Используем официальный образ tensoflow как базовый для архитектуры x86_64
 #FROM tensorflow/tensorflow:latest
 # Используем  образ от bitnami как базовый для архитектуры ARM и x86_64
-FROM --platform=amd64 ubuntu:22.04
+FROM --platform=arm64 ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV DEB_PYTHON_INSTALL_LAYOUT=deb_system
