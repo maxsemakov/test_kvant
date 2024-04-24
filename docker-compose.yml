@@ -1,11 +1,7 @@
 version: '3'
 services:
-  your_service:
-    image: maxsemakov/kvant_test:kvant-arm64v8
+  notebooks:
+    image: maxsemakov/kvant_test:kvant-arm64v8-2
     ports:
       - "8888:8888"
-
-    volumes:
-      - /Users/maxsemakov/Documents/KVANT/test_kvant:/app
-    command: >
-      sh -c "pip install -r requirements.txt && python main.py"
+    
